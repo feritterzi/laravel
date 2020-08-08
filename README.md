@@ -10,13 +10,13 @@ $ composer dump-autoload
 config/app.php dosyası içinde
 Package Service Providers... bölümünün altına
 
-```bash
+```php
 Intervention\Image\ImageServiceProvider::class, 
 ```
 satırını ekliyoruz
 
 Aliases içine...
-```bash
+```php
 'Image' => \Intervention\Image\Facades\Image::class, satırını ekliyoruz
 ```
 
@@ -33,13 +33,13 @@ $ php artisan vendor:publish --provider="Torann\GeoIP\GeoIPServiceProvider" --ta
 config/app.php dosyası içinde
 Package Service Providers... bölümünün altına
 
-```bash
+```php
 Torann\GeoIP\GeoIPServiceProvider::class, 
 ```
 satırını ekliyoruz
 
 Aliases içine...
-```bash
+```php
 'GeoIP' => \Torann\GeoIP\Facades\GeoIP::class, 
 ```
 satırını ekliyoruz
@@ -51,7 +51,7 @@ $ composer require --dev barryvdh/laravel-ide-helper
 ```
 
 composer.json  dosyasına şu satırları ekliyoruz:
-```bash
+```js
 "extra": {
   "laravel": {
     "dont-discover": [
@@ -64,7 +64,7 @@ composer.json  dosyasına şu satırları ekliyoruz:
 app/Providers/AppServiceProvider.php dosyası içinde sadece production ortamında çalışmaması için
 register metodu içine şu satırları ekliyoruz
 
-```bash
+```php
 if ($this->app->environment() !== 'production') {
     $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
 }
@@ -76,7 +76,7 @@ $ php artisan ide-helper:generate
 
 composer.json dosyasına şu satırları ekliyoruz:
 
-```bash
+```js
 "scripts": {
     "post-update-cmd": [
         "Illuminate\\Foundation\\ComposerScripts::postUpdate",
@@ -103,7 +103,7 @@ $ npm install browser-sync browser-sync-webpack-plugin inputmask js-cookie minim
 
 package.json doyasına şu satırları ekliyoruz:
 
-```bash
+```js
 "optionalDependencies": {
         "fs-events": "*"
     }
