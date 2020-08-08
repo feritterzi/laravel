@@ -165,9 +165,8 @@ return [
         /*
          * Package Service Providers...
          */
-        \Intervention\Image\ImageServiceProvider::class,
-        \Spatie\Permission\PermissionServiceProvider::class,
-        \Torann\GeoIP\GeoIPServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        Torann\GeoIP\GeoIPServiceProvider::class,
         /*
          * Application Service Providers...
          */
