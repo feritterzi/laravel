@@ -90,7 +90,7 @@ composer.json dosyasına şu satırları ekliyoruz:
 $ php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
 $ php artisan ide-helper:meta
 ```
-Note: `php -r "echo ini_get('memory_limit').PHP_EOL;" komutu ile memory_limit hatası alırsanız php.ini dosyası içinde`
+> Note: php -r "echo ini_get('memory_limit').PHP_EOL;" komutu ile memory_limit hatası alırsanız php.ini dosyası içinde
 
 ```bash
 memory_limit = -1 
