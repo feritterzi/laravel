@@ -1,8 +1,6 @@
 {
-    "/js/app.js": "/js/app.js?id=82b5ee629ef45738a2ab",
-    "/themes/admin/limitless/js/app.js": "/themes/admin/limitless/js/app.js?id=82b5ee629ef45738a2ab",
-    "/js/limitless.js": "/js/limitless.js?id=e787d078cb4ea66a530f",
-    "/css/limitless.css": "/css/limitless.css?id=1409ed7174a165094fe2",
-    "/themes/admin/limitless/js/limitless.js": "/themes/admin/limitless/js/limitless.js?id=d41d8cd98f00b204e980",
-    "/themes/admin/limitless/css/limitless.css": "/themes/admin/limitless/css/limitless.css?id=d41d8cd98f00b204e980"
+    "/js/app.js": "/js/app.js?id=6e7a51eb88ec915b9fbf",
+    "/css/app.css": "/css/app.css?id=1409ed7174a165094fe2",
+    "/backend/themes/limitless/assets/js/app.js": "/backend/themes/limitless/assets/js/app.js?id=6e7a51eb88ec915b9fbf",
+    "/backend/themes/limitless/assets/css/app.css": "/backend/themes/limitless/assets/css/app.css?id=637b83f34f22dae619d0"
 }
