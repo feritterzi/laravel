@@ -16,7 +16,9 @@ Route::group(['prefix'=>'advisor','namespace'=>'Advisor','middleware'=>['auth'],
 Route::group(['prefix'=>'user','namespace'=>'User','middleware'=>['auth'],'as'=>'user.'], function(){
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 });
-Route::get('/', 'FrontEndController@index')->name('homepage');
+Route::get('/', 'FrontEndController@index')->name('index');
+Route::get('/home', 'FrontEndController@index')->name('home');
+Route::get('/contact', 'FrontEndController@contact')->name('contact');
 
 Auth::routes();
 

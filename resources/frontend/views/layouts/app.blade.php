@@ -13,19 +13,16 @@
         <div class="content-wrapper">
 
             <!-- Content area -->
-            <div class="content d-flex justify-content-center align-items-center">
+            <div class="content">
                 @yield('content')
             </div>
 			<!-- /content area -->
-
-
-			@include('frontend/views/partials/footer')
-
 		</div>
 		<!-- /main content -->
 
 	</div>
-	<!-- /page content -->
+    <!-- /page content -->
+    @include('frontend/views/partials/footer')
     </div>
 </body>
 </html>

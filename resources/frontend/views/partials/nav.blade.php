@@ -21,7 +21,7 @@
 						<span class="d-md-none ml-2">Users</span>
 						<span class="badge badge-mark border-orange-400 ml-auto ml-md-0"></span>
 					</a>
-					
+
 					<div class="dropdown-menu dropdown-content wmin-md-300">
 						<div class="dropdown-content-header">
 							<span class="font-weight-semibold">Users online</span>
@@ -100,7 +100,7 @@
 						<span class="d-md-none ml-2">Activity</span>
 						<span class="badge badge-mark border-orange-400 ml-auto ml-md-0"></span>
 					</a>
-					
+
 					<div class="dropdown-menu dropdown-content wmin-md-350">
 						<div class="dropdown-content-header">
 							<span class="font-weight-semibold">Latest activity</span>
@@ -124,7 +124,7 @@
 									<div class="mr-3">
 										<a href="#" class="btn bg-pink-400 rounded-round btn-icon"><i class="icon-paperplane"></i></a>
 									</div>
-									
+
 									<div class="media-body">
 										Special offers have been sent to subscribed users by <a href="#">Donna Gordon</a>
 										<div class="font-size-sm text-muted mt-1">36 minutes ago</div>
@@ -135,7 +135,7 @@
 									<div class="mr-3">
 										<a href="#" class="btn bg-blue rounded-round btn-icon"><i class="icon-plus3"></i></a>
 									</div>
-									
+
 									<div class="media-body">
 										<a href="#">Chris Arney</a> created a new <span class="font-weight-semibold">Design</span> branch in <span class="font-weight-semibold">Limitless</span> repository
 										<div class="font-size-sm text-muted mt-1">2 hours ago</div>
@@ -146,7 +146,7 @@
 									<div class="mr-3">
 										<a href="#" class="btn bg-purple-300 rounded-round btn-icon"><i class="icon-truck"></i></a>
 									</div>
-									
+
 									<div class="media-body">
 										Shipping cost to the Netherlands has been reduced, database updated
 										<div class="font-size-sm text-muted mt-1">Feb 8, 11:30</div>
@@ -157,7 +157,7 @@
 									<div class="mr-3">
 										<a href="#" class="btn bg-warning-400 rounded-round btn-icon"><i class="icon-comment"></i></a>
 									</div>
-									
+
 									<div class="media-body">
 										New review received on <a href="#">Server side integration</a> services
 										<div class="font-size-sm text-muted mt-1">Feb 2, 10:20</div>
@@ -168,7 +168,7 @@
 									<div class="mr-3">
 										<a href="#" class="btn bg-teal-400 rounded-round btn-icon"><i class="icon-spinner11"></i></a>
 									</div>
-									
+
 									<div class="media-body">
 										<strong>January, 2018</strong> - 1320 new users, 3284 orders, $49,390 revenue
 										<div class="font-size-sm text-muted mt-1">Feb 1, 05:46</div>
@@ -185,6 +185,11 @@
 							</div>
 						</div>
 					</div>
+                </li>
+                <li class="nav-item">
+                <a href="{{url('contact')}}" class="navbar-nav-link">
+                <span class="ml-2">{{__('index.contact')}}</span>
+					</a>
 				</li>
 			</ul>
 
@@ -207,12 +212,12 @@
 				</li>
 				@guest
 					<li class="nav-item">
-						<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+						<a class="nav-link" href="{{ route('login') }}">{{ __('auth.login') }}</a>
 					</li>
 					@if (Route::has('register'))
 					<li class="nav-item">
-						<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-					</li>				
+						<a class="nav-link" href="{{ route('register') }}">{{ __('auth.register') }}</a>
+					</li>
 					@endif
 				@else
 				<li class="nav-item dropdown dropdown-user">

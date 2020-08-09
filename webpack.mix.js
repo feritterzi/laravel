@@ -10,6 +10,7 @@ mix.copy('resources/global_assets/images/lang','public/images/lang');
 mix.copy('resources/global_assets/images/placeholders','public/images/placeholders');
 mix.copy('resources/frontend/js/plugins/forms/styling/uniform.min.js','public/js/plugins/forms/styling/uniform.min.js');
 mix.copy('resources/frontend/js/login.js','public/js/login.js');
+mix.copy('resources/frontend/js/gmapbasic.js','public/js/gmapbasic.js');
 mix.combine([
        FrontEndResourcesPath+'js/app.js',
        FrontEndResourcesPath+'js/main/jquery.min.js',

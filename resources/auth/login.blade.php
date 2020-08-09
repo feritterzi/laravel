@@ -2,18 +2,18 @@
 
 @section('content')
 <!-- Login form -->
-<form class="login-form" method="POST" action="{{ route('login') }}">
+<form class="login-form mx-auto" method="POST" action="{{ route('login') }}">
     @csrf
-    <div class="card mb-0">
+    <div class="card">
         <div class="card-body">
             <div class="text-center mb-3">
                 <i class="icon-reading icon-2x text-slate-300 border-slate-300 border-3 rounded-round p-3 mb-3 mt-1"></i>
-                <h5 class="mb-0">{{ __('Login') }}</h5>
+                <h5 class="mb-0">{{ __('auth.login') }}</h5>
                 <span class="d-block text-muted"><!--Your credentials--></span>
             </div>
 
             <div class="form-group form-group-feedback form-group-feedback-left">
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{ __('E-Mail Address') }}">
+                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{ __('auth.email-address') }}">
                 <div class="form-control-feedback">
                     <i class="icon-user text-muted"></i>
                 </div>
@@ -25,7 +25,7 @@
             </div>
 
             <div class="form-group form-group-feedback form-group-feedback-left">
-                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="{{ __('Password') }}">
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="{{ __('auth.password') }}">
                 <div class="form-control-feedback">
                     <i class="icon-lock2 text-muted"></i>
                 </div>
@@ -40,16 +40,16 @@
                 <div class="form-check mb-0">
                     <label class="form-check-label">
                         <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} class="form-input-styled"  data-fouc>
-                        {{ __('Remember Me') }}
+                        {{ __('auth.remember-me') }}
                     </label>
                 </div>
                 @if (Route::has('password.request'))
-                <a href="{{ route('password.request') }}" class="ml-auto">{{ __('Forgot Your Password?') }}</a>
+                <a href="{{ route('password.request') }}" class="ml-auto">{{ __('auth.forgot-your-password') }}</a>
                 @endif
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block">{{ __('Login') }} <i class="icon-circle-right2 ml-2"></i></button>
+                <button type="submit" class="btn btn-primary btn-block">{{ __('auth.login') }} <i class="icon-circle-right2 ml-2"></i></button>
             </div>
 
             <div class="form-group text-center text-muted content-divider">
@@ -68,7 +68,7 @@
             </div>
 
             <div class="form-group">
-                <a href="{{ route('register') }}" class="btn btn-light btn-block">{{ __('Register') }}</a>
+                <a href="{{ route('register') }}" class="btn btn-light btn-block">{{ __('auth.register') }}</a>
             </div>
 
             <span class="form-text text-center text-muted">By continuing, you're confirming that you've read our <a href="#">Terms &amp; Conditions</a> and <a href="#">Cookie Policy</a></span>
