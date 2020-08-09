@@ -37,4 +37,18 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    protected function authenticated($request, $user)
+    {
+
+        if ($user->hasRole('admin','web')) {
+            $this->redirectTo = route('admin.dashboard');
+        } elseif ($user->hasRole('agent','web')) {
+            $this->redirectTo = route('agent.dashboard');
+        } elseif ($user->hasRole('advisor','web')) {
+            $this->redirectTo = route('advisor.dashboard');
+        } elseif ($user->hasRole('user','web')) {
+            $this->redirectTo = route('user.dashboard');
+        }
+    }
 }

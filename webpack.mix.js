@@ -8,6 +8,8 @@ const LimitlessAssets = 'limitless/assets/';
 mix.copy('resources/global_assets/css/icons/icomoon/fonts','public/css/fonts');
 mix.copy('resources/global_assets/images/lang','public/images/lang');
 mix.copy('resources/global_assets/images/placeholders','public/images/placeholders');
+mix.copy('resources/frontend/js/plugins/forms/styling/uniform.min.js','public/js/plugins/forms/styling/uniform.min.js');
+mix.copy('resources/frontend/js/login.js','public/js/login.js');
 mix.combine([
        FrontEndResourcesPath+'js/app.js',
        FrontEndResourcesPath+'js/main/jquery.min.js',

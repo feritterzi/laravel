@@ -9,27 +9,23 @@
 
     <title>Admin {{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    -->
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <!-- Global stylesheets -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-	<link href="{{ mix('css/limitless.css') }}" rel="stylesheet" type="text/css">
-	<!-- /global stylesheets -->
+    <!-- Css -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css">
 
-	<!-- Core JS files -->
-	<script src="{{ mix('js/limitless.js') }}"></script>
-	<!-- /core JS files -->
+    <!-- Js -->
+    <script src="{{ mix('js/app.js') }}"></script>
 
-	<script src="{{ mix('js/app.js') }}"></script>
-	<!-- /theme JS files -->
+
+    @yield('page-level-scripts')
+
+
 </head>
 <body>
-    @include('frontend/partials/nav')
+    @include('frontend/views/partials/nav')
     <!-- Page content -->
 	<div class="page-content">
 
@@ -43,7 +39,7 @@
 			<!-- /content area -->
 
 
-			@include('frontend/partials/footer')
+			@include('frontend/views/partials/footer')
 
 		</div>
 		<!-- /main content -->

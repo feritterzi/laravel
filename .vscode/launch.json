@@ -21,13 +21,6 @@
             "program": "${file}",
             "cwd": "${fileDirname}",
             "port": 9000
-        },
-        {
-            "type": "pwa-chrome",
-            "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "https://kayyum.test",
-            "webRoot": "${workspaceFolder}"
         }
     ]
 }
