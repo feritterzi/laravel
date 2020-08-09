@@ -1,9 +1,12 @@
 {
     "/js/plugins/forms/styling/uniform.min.js": "/js/plugins/forms/styling/uniform.min.js?id=95c266e75ed5003254ba",
+    "/js/plugins/forms/inputs/maxlength.min.js": "/js/plugins/forms/inputs/maxlength.min.js?id=82542fe55271c4deb8f8",
+    "/js/plugins/notifications/noty.min.js": "/js/plugins/notifications/noty.min.js?id=1294337f45a7b78b722e",
     "/js/login.js": "/js/login.js?id=626f92096efe4823cc71",
-    "/js/gmapbasic.js": "/js/gmapbasic.js?id=98350aae983451cb56f5",
+    "/js/gmapbasic.js": "/js/gmapbasic.js?id=8783b4f1a59eca310eac",
+    "/js/slinky.min.js.map": "/js/slinky.min.js.map?id=9cf0fb4df2514453a208",
     "/js/app.js": "/js/app.js?id=6e7a51eb88ec915b9fbf",
-    "/css/app.css": "/css/app.css?id=1409ed7174a165094fe2",
+    "/css/app.css": "/css/app.css?id=c15785483e5ac6a24d8c",
     "/backend/themes/limitless/assets/js/app.js": "/backend/themes/limitless/assets/js/app.js?id=6e7a51eb88ec915b9fbf",
-    "/backend/themes/limitless/assets/css/app.css": "/backend/themes/limitless/assets/css/app.css?id=637b83f34f22dae619d0"
+    "/backend/themes/limitless/assets/css/app.css": "/backend/themes/limitless/assets/css/app.css?id=bd89ddd0d7eb869d4112"
 }

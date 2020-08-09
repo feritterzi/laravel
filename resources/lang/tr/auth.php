@@ -30,6 +30,7 @@ return [
     'forgot-your-password'=>'Şifremi unuttum ?',
     'reset-password'=>'Şifre Sıfırla',
     'reset-password-text1'=>'Talimatları size e-postayla göndereceğiz',
+    'change-password-text1'=>'Yeni şifrenizi tanımlayabilirsiniz.',
     'send-password-reset-link'=>'Şifre sıfırlama linki gönder',
     'failed'   => 'Girilen kimlik bilgileri kayıtlarımızla eşleşmiyor.',
     'city'=>'İl',
@@ -37,4 +38,6 @@ return [
     'address'=>'Adres',
     'throttle' => 'Çok fazla giriş denemesi. :seconds saniye sonra lütfen tekrar deneyin.',
     'all-fields-required' => 'Bütün alanlar gereklidir.',
+    'created_at'=>'Oluşturma Tarihi',
+    'updated_at'=>'Güncelleme Tarihi'
 ];

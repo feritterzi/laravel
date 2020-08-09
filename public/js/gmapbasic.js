@@ -32,8 +32,8 @@ var GoogleMapBasic = function() {
 
             // Optinos
             var mapOptions = {
-                zoom: 12,
-                center: new google.maps.LatLng(47.496, 19.037)
+                zoom: 10,
+                center: new google.maps.LatLng(41.0049823, 28.7319965)
             };
 
             // Apply options

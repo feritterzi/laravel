@@ -1,10 +1,10 @@
 ## Kurulum
 ```bash
-$ laravel new proje_adi --auth
-$ npm install
-$ composer require doctrine/dbal
-$ composer require intervention/image
-$ composer dump-autoload
+laravel new proje_adi --auth
+npm install
+composer require doctrine/dbal
+composer require intervention/image
+composer dump-autoload
 ```
 
 config/app.php dosyası içinde
@@ -21,13 +21,13 @@ Aliases içine...
 ```
 
 ```bash
-$ composer require spatie/laravel-analytics
-$ php artisan vendor:publish --provider="Spatie\Analytics\AnalyticsServiceProvider"
-$ composer require spatie/laravel-permission
-$ php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
-$ php artisan optimize:clear
-$ composer require torann/geoip
-$ php artisan vendor:publish --provider="Torann\GeoIP\GeoIPServiceProvider" --tag=config
+composer require spatie/laravel-analytics
+php artisan vendor:publish --provider="Spatie\Analytics\AnalyticsServiceProvider"
+composer require spatie/laravel-permission
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+php artisan optimize:clear
+composer require torann/geoip
+php artisan vendor:publish --provider="Torann\GeoIP\GeoIPServiceProvider" --tag=config
 ```
 
 config/app.php dosyası içinde
@@ -45,9 +45,9 @@ Aliases içine...
 satırını ekliyoruz
 
 ```bash
-$ composer require barryvdh/laravel-debugbar --dev
-$ php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
-$ composer require --dev barryvdh/laravel-ide-helper
+composer require barryvdh/laravel-debugbar --dev
+php artisan vendor:publish --provider="Barryvdh\Debugbar\ServiceProvider"
+composer require --dev barryvdh/laravel-ide-helper
 ```
 
 composer.json  dosyasına şu satırları ekliyoruz:
@@ -71,7 +71,8 @@ if ($this->app->environment() !== 'production') {
 ```
 
 ```bash
-$ php artisan ide-helper:generate
+php artisan ide-helper:generate
+php artisan clear-compiled
 ```
 
 composer.json dosyasına şu satırları ekliyoruz:
@@ -87,8 +88,8 @@ composer.json dosyasına şu satırları ekliyoruz:
 ```
 
 ```bash
-$ php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
-$ php artisan ide-helper:meta
+php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
+php artisan ide-helper:meta
 ```
 > Note: php -r "echo ini_get('memory_limit').PHP_EOL;" komutu ile memory_limit hatası alırsanız php.ini dosyası içinde
 
@@ -98,7 +99,7 @@ memory_limit = -1
 olarak ayarlayabilirsiniz.
 
 ```bash
-$ npm install browser-sync browser-sync-webpack-plugin inputmask js-cookie minimist rtlcss select2 sweetalert vue-router html2canvas -D 
+npm install browser-sync browser-sync-webpack-plugin inputmask js-cookie minimist rtlcss select2 sweetalert vue-router html2canvas -D 
 ```
 
 package.json doyasına şu satırları ekliyoruz:
@@ -107,9 +108,25 @@ package.json doyasına şu satırları ekliyoruz:
 "optionalDependencies": {
         "fs-events": "*"
     }
+```
 
+Localde çalışırken yardımcı telescope 
+```bash
+composer require laravel/telescope
+php artisan telescope:install
+```
+
+Mail göndermek için
+```bash
+composer require guzzlehttp/guzzle
+php artisan make:mail ContactMail
 ```
 
 ```bash
+php artisan migrate:fresh
+php artisan db:seed
+npm run dev
+
+
 git clone https://github.com/feritterzi/laravel.git .
 ``` 

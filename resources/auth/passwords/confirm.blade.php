@@ -1,49 +1,47 @@
 @extends('frontend/views/layouts.app')
 
 @section('content')
+<form class="d-inline" method="POST" action="{{ route('password.confirm') }}">
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('auth.confirm-password') }}</div>
-
+        <div class="col-md-4">
+            <div class="card mb-0">
                 <div class="card-body">
-                    {{ __('Please confirm your password before continuing.') }}
-
-                    <form method="POST" action="{{ route('password.confirm') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('auth.password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                    <div class="text-center mb-3">
+                        <i class="icon-user-lock icon-2x text-success border-successs border-3 rounded-round p-3 mb-3 mt-1"></i>
+                        <h5 class="mb-0">{{ __('auth.confirm-password') }}</h5>
+                        <span class="d-block text-muted mb-3">
+                            {{ __('Please confirm your password before continuing.') }}
+                        </span>
+                        <div class="form-group form-group-feedback form-group-feedback-right">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required  placeholder="{{ __('auth.password') }}">
+                            <div class="form-control-feedback">
+                                <i class="icon-user-lock text-muted"></i>
                             </div>
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('auth.confirm-password') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('auth.forgot-your-password') }}
-                                    </a>
-                                @endif
+                        @if (session('resent'))
+                            <div class="alert alert-success" role="alert">
+                                {{ __('A fresh verification link has been sent to your email address.') }}
                             </div>
-                        </div>
-                    </form>
+                        @endif
+
+                            @csrf
+                            <button type="submit" class="btn bg-blue btn-block"><i class="icon-spinner11 mr-2"></i> {{ __('auth.confirm-password') }}</button>
+                            @if (Route::has('password.request'))
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    {{ __('auth.forgot-your-password') }}
+                                </a>
+                            @endif
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</form>
 @endsection

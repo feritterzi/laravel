@@ -34,5 +34,6 @@ return [
     'post_ad'=>'İlan Ver',
     'free_post_ad'=>'Ücretsiz İlan Ver →',
     'myads'=>'İlanlarım',
-    'search_text'=>'Kelime veya ilan no ile ara...'
+    'search_text'=>'Kelime veya ilan no ile ara...',
+    'btnloading'=>'Bekleyin...',
 ];
