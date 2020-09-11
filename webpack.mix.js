@@ -7,6 +7,7 @@ const AdminPublicPath = 'public/backend/themes/';
 const LimitlessAssets = 'limitless/assets/';
 
 mix.copy(GlobalResourcesPath+'css/icons/icomoon/fonts','public/css/fonts');
+mix.copy(GlobalResourcesPath+'css/icons/icomoon/fonts',AdminPublicPath+LimitlessAssets+'css/fonts');
 mix.copy(GlobalResourcesPath+'images/lang','public/images/lang');
 mix.copy(GlobalResourcesPath+'images/placeholders','public/images/placeholders');
 mix.copy(GlobalResourcesPath+'js/plugins/forms/styling/uniform.min.js',FrontEndPublicPath+'plugins/forms/styling/uniform.min.js');
@@ -39,6 +40,8 @@ mix.combine([
         GlobalResourcesPath+'js/main/bootstrap.bundle.min.js',
         GlobalResourcesPath+'js/plugins/loaders/blockui.min.js',
         GlobalResourcesPath+'js/plugins/ui/slinky.min.js',
+        GlobalResourcesPath+'js/plugins/tables/datatables/datatables.min.js',
+        GlobalResourcesPath+'js/plugins/forms/selects/select2.min.js'
     ],AdminPublicPath+LimitlessAssets+'/js/app.js')
     .styles([
         AdminResourcesPath+LimitlessAssets+'css/app.css',

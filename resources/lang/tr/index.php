@@ -28,6 +28,7 @@ return [
     'sss'=>'S.S.S',
     'links'=>'Linkler',
     'contact'=>'İletişim',
+    'blog'=>'Blog',
     'about'=>'Hakkımızda',
     'privacy'=>'Gizlilik Politikası',
     'termsofservice'=>'Şartlar',

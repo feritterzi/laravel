@@ -9,7 +9,6 @@ $factory->define(Contact::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'created_at' => now(),
         'subject' => $faker->sentence,
         'body' => $faker->text,
         'mobilephone'=>$faker->e164PhoneNumber

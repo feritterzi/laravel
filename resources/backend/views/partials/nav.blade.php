@@ -15,6 +15,23 @@
 
 		<div class="collapse navbar-collapse" id="navbar-mobile">
 			<ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a href="{{url('admin/blog')}}" class="navbar-nav-link">
+                        <span class="ml-2">{{__('index.blog')}}</span>
+					</a>
+				</li>
+                <li class="nav-item">
+                    <a href="{{url('admin/support')}}" class="navbar-nav-link">
+                        <span class="ml-2">{{__('index.support')}}</span>
+					</a>
+				</li>
+                <li class="nav-item">
+                    <a href="{{url('admin/contact')}}" class="navbar-nav-link">
+                        <span class="ml-2">{{__('index.contact')}}</span>
+					</a>
+                </li>
+
 				<li class="nav-item dropdown">
 					<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">
 						<i class="icon-people"></i>
@@ -205,16 +222,6 @@
 						<a href="#" class="dropdown-item russian"><img src="/images/lang/ru.png" class="img-flag" alt=""> Русский</a>
 					</div>
 				</li>
-				@guest
-					<li class="nav-item">
-						<a class="nav-link" href="{{ route('login') }}">{{ __('auth.login') }}</a>
-					</li>
-					@if (Route::has('register'))
-					<li class="nav-item">
-						<a class="nav-link" href="{{ route('register') }}">{{ __('auth.register') }}</a>
-					</li>
-					@endif
-				@else
 				<li class="nav-item dropdown dropdown-user">
 					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
 						<img src="/images/placeholders/placeholder.jpg" class="rounded-circle mr-2" height="34" alt="">
@@ -234,7 +241,6 @@
 						</form>
 					</div>
 				</li>
-				@endguest
 			</ul>
 		</div>
 	</div>

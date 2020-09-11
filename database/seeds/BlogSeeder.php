@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-class ContactSeeder extends Seeder
+
+class BlogSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -10,6 +11,6 @@ class ContactSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Models\Contact::class, 20)->create();
+        factory(App\Models\Blog::class, 20)->create();
     }
 }

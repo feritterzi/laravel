@@ -14,10 +14,10 @@
 
     <!-- Css -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-	<link href="{{ mix('css/app.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ mix('backend/themes/limitless/assets/css/app.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Js -->
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('backend/themes/limitless/assets/js/app.js') }}"></script>
 
 
     @yield('page-level-scripts')
@@ -25,7 +25,7 @@
 
 </head>
 <body>
-    @include('frontend/views/partials/nav')
+    @include('backend/views/partials/nav')
     <!-- Page content -->
 	<div class="page-content">
 
@@ -39,7 +39,7 @@
 			<!-- /content area -->
 
 
-			@include('frontend/views/partials/footer')
+			@include('backend/views/partials/footer')
 
 		</div>
 		<!-- /main content -->

@@ -187,8 +187,18 @@
 					</div>
                 </li>
                 <li class="nav-item">
-                <a href="{{url('contact')}}" class="navbar-nav-link">
-                <span class="ml-2">{{__('index.contact')}}</span>
+                    <a href="{{url('blog')}}" class="navbar-nav-link">
+                        <span class="ml-2">{{__('index.blog')}}</span>
+					</a>
+				</li>
+                <li class="nav-item">
+                    <a href="{{url('support')}}" class="navbar-nav-link">
+                        <span class="ml-2">{{__('index.support')}}</span>
+					</a>
+				</li>
+                <li class="nav-item">
+                    <a href="{{url('contact')}}" class="navbar-nav-link">
+                        <span class="ml-2">{{__('index.contact')}}</span>
 					</a>
 				</li>
 			</ul>
@@ -216,7 +226,7 @@
 					</li>
 					@if (Route::has('register'))
 					<li class="nav-item">
-						<a class="nav-link" href="{{ route('register') }}">{{ __('auth.register') }}</a>
+						<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
 					</li>
 					@endif
 				@else
